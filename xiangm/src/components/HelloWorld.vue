@@ -25,15 +25,18 @@ export default {
                         pIdKey: "pId",
                         rootPId: 0
                         }
-                    }
+                    },
+                view:{
+                    showLine:false
+                }
                 },
             zNodes:[
-                {id:1, pId:0, name: "公司文档"},
-                {id:11, pId:0, name: "admin"},
-                {id:12, pId:0, name: "财务部"},
-                {id:13, pId:0, name: "生产部"},
-                {id:14, pId:0, name: "研发部"},
-                {id:15, pId:0, name: "行政部"},
+                {id:1, pId:0, name: "公司文档",icon:'../../static/images/mx-5.jpg'},
+                {id:11, pId:0, name: "admin",icon:'../../static/images/mx-5.jpg'},
+                {id:12, pId:0, name: "财务部",icon:'../../static/images/mx-5.jpg'},
+                {id:13, pId:0, name: "生产部",icon:'../../static/images/mx-5.jpg'},
+                {id:14, pId:0, name: "研发部",icon:'../../static/images/mx-5.jpg'},
+                {id:15, pId:0, name: "行政部",icon:'../../static/images/mx-5.jpg'},
                 ]
             }
         },
@@ -52,5 +55,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.ztree{
+    //line-height:60px;
+}
+.ztree li{
+    line-height:60px;
+}
+.ztree li span.button{
+    line-height:100px;
+
+}
+
 
 </style>

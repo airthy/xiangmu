@@ -34,6 +34,7 @@
 				<HelloWorld></HelloWorld>
 			</el-aside>
 			<el-main>
+			    <navbutton></navbutton>
 				<doctable></doctable>
 			</el-main>
 		</el-container>
@@ -43,6 +44,7 @@
 <script>
     import HelloWorld from './components/HelloWorld'
     import doctable from './components/doctable'
+    import navbutton from './components/navbutton'
 	export default {
 		name: 'app',
 		data () {
@@ -53,22 +55,33 @@
 		},
 		components:{
 		    HelloWorld,
-		    doctable
+		    doctable,
+		    navbutton
 		}
 	}
 </script>
 
 	<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    body{
+	    margin:0;
+	    padding:0;
+    }
 	.el-header, .el-footer {
 		background-color: #ffffff;
+		border:1px solid #dfe3ec;
 		color: #333;
 	    padding:0;
+	    margin:0;
 		line-height: 60px;
 	}
 
 	.el-aside {
-		//background-color: #D3DCE6;
+		
+		width:250px;
+		height:calc(100vh - 60px); /*高度自适应*/
+		border:solid  #DCDFE6;
+		border-width:0 1px 1px 1px;
 		color: #333;
 		text-align: center;
 		//line-height: 200px;  /*行间距*/
@@ -82,7 +95,7 @@
 	}
 
 	body > .el-container {
-		margin-bottom: 40px;
+		//margin-bottom: 40px;
 	}
 
 	.el-container:nth-child(5) .el-aside,
@@ -96,7 +109,7 @@
 
 	.el-row {
     margin-bottom: 20px;
-    &:last-child {
+    &:last-child {/*sass语法 上一级选择器*/
         margin-bottom: 0;
     }
   }

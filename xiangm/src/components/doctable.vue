@@ -50,14 +50,17 @@ export default{
 
 <style>
 .m-table{
-	margin-left:20%;
+	margin-left:5%;
 	border-collapse:collapse;
+}
+.m-table tr:nth-child(1){
+	border-top:#ffffff;
 }
 .m-table tr{
 	height:20px;
 	line-height:60px;
 	border:1px solid;
-	border-color: #DCDFE6 #ffffff;
+	border-color: #DCDFE6;
 	border-radius:2px;
 }
 .m-table td,th{
