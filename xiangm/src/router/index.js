@@ -1,15 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-
-Vue.use(Router)
+import App from '@/App'
+import docManger from '../pages/docManger'
+import login from '../pages/login'
+//const login = () => {import('@/pages/login')}
+//const docManger = () => { import('@/pages/docManger')}
+Vue.use(Router) //注册路由
 
 export default new Router({
-  routes: [
+    routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+    	path:'/',
+    	name:'docManger',
+    	component:docManger
+
+    },
+    {
+    	path:'/login',
+    	name:'login',
+    	component:login
     }
   ]
 })
